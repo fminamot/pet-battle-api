@@ -1,8 +1,9 @@
 pipeline {
     agent {
-	node {
-	    label "any"
-	}
+      kubernetes {
+        cloud 'openshift'
+        yamlFile 'jenkins-agent-maven.yaml'
+      }
     }
     stages {
         stage('Build') { 
