@@ -6,3 +6,6 @@ spec:
     - name: jnlp
       image: quay.io/openshift/origin-jenkins-agent-maven:latest
       tty: false
+      env:
+      - name: GIT_SSL_NO_VERIFY
+        value: 'true'
